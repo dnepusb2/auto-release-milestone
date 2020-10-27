@@ -2,8 +2,6 @@ name: Test Flow
 
 
 on:
-  push:
-    branches: [ main ]
   milestone:
       types: [closed]    
 
