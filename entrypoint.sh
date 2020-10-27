@@ -1,7 +1,7 @@
 #!/bin/bash
 set -u # undeclared variables 
 
-if [ "$GITHUB_EVENT_NAME" != "milestone" ]; then
+if [ "$GITHUB_EVENT_NAME" != "push" ]; then
     echo "::debug::The event name was '$GITHUB_EVENT_NAME'"
     exit 0
 fi
