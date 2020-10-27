@@ -19,7 +19,7 @@ jobs:
         id: create-release-draft
         uses: ./
         with:
-          repo-token: ${{ secrets.GTIHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print the URL of the release draft
         if: steps.create-release-draft.outputs.release-url != ''
