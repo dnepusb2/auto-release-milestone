@@ -4,7 +4,7 @@ on:
     branches: 
       - master
   milestone:
-      types: [ closed ] 
+      types: [closed] 
 
 jobs:
   test:
