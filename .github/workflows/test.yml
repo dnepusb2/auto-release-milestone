@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  test-1:
+  ci:
     name: Test Job
     runs-on: ubuntu-latest
 
