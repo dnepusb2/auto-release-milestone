@@ -8,7 +8,7 @@ fi
 
 event_type=$(jq --raw-output .action $GITHUB_EVENT_NAME)
 
-if [ $event_type != "closed" ]l then 
+if [ $event_type != "closed" ]; then 
     echo "::debug::The event type was '$GITHUB_EVENT_PATH'"
     exit 0
 fi 
