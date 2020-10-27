@@ -1,20 +1,17 @@
 name: Test
-
 on:
   push:
     branches: [ master ]
   milestone:
-      types: [ closed] 
+      types: [ closed ] 
 
 jobs:
   test:
-    # The type of runner that the job will run on
+    name: Test Job
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Get the sources
-      - uses: actions/checkout@v1
+        uses: actions/checkout@v1
 
       - name: Create a release draft for a milestone
         id: create-release-draft
