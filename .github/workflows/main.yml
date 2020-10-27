@@ -4,6 +4,8 @@ name: Test Flow
 on:
   push:
     branches: [ main ]
+  milestone:
+      types: [closed]    
 
 
 jobs:
@@ -16,8 +18,8 @@ jobs:
       - name: Create a release draft for a milestone
         id: create-release-draft
         uses: ./
-        # with:
-        #   repo-token: ${{ secrets.GTIHUB_TOKEN }}
+        with:
+          repo-token: ${{ secrets.GTIHUB_TOKEN }}
 
       - name: Print the URL of the release draft
         if: steps.create-release-draft.outputs.release-url != ''
