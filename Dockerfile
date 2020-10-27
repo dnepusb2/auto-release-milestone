@@ -7,6 +7,7 @@ LABEL version="0.1.0"
 LABEL repository="https://github.com/dnepusb2/auto-release-milestone.git"
 LABEL maintainer="Diego Nepomnaschy"
 
+RUN apt-get update && apt-get install -y jq
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
 
